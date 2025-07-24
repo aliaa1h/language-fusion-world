@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Fusion World</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <h2>Language Fusion World</h2>
+    <button onclick="logout()">Logout</button>
+  </div>
 
+  <div class="container">
+    <h3>Create or Join a Project</h3>
+    <input id="projectName" placeholder="Project name">
+    <select id="privacy">
+      <option value="private">Private</option>
+      <option value="public">Public</option>
+    </select>
+    <button onclick="createOrJoinProject()">Start</button>
+
+    <h3>Your Vocabulary</h3>
+    <input id="vocabWord" placeholder="Word">
+    <input id="vocabDefinition" placeholder="Definition">
+    <button onclick="addWord()">Add Word</button>
+    <ul id="vocabList"></ul>
+
+    <h3>Your Grammar Rules</h3>
+    <input id="grammarRule" placeholder="Grammar Rule">
+    <button onclick="addGrammar()">Add Rule</button>
+    <ul id="grammarList"></ul>
+
+    <h3>Soundboard</h3>
+    <select onchange="playSound(this.value)">
+      <option value="">Choose a sound</option>
+      <option value="tone1">Tone 1</option>
+      <option value="click1">Click 1</option>
+      <option value="beep1">Beep 1</option>
+    </select>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
